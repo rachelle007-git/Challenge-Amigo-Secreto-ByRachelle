@@ -26,7 +26,7 @@ Amigos.push(nombreAmigo);
 inputAmigo.ariaValu ="";
 
 // Actualizar la lista en el HTML
-actualizarlista();
+ActualizarLista();
 
 }
 
@@ -48,6 +48,23 @@ function actualizarlista(){
 
 
 //Funcion para seleccionar un amigo aleatorio
+function sortearAmigo(){
+    //Validar que haya amigos disonibles
+    if(Amigos.length === 0){//Comprueba si el array 'amigo' esta vacio.
+        alert("No hay amigos disponibles para sortar. Agregar al menos uno.")
+
+    }
+
+    //Genera un indice aleatorio
+    const indiceAleatorio = Math.floor(Math.random() * Amigos.length); //Genera un numero aleatorio entre el 0 la longitud del array menor
+    
+    //Obtener el nombre sorteado
+    const amigoSorteado = Amigos[indiceAleatorio]//Use el indice aleatorio para obtener el nombe del array
+
+    //Mostrar el resultado en el HTML
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `Amigo sorteado: <strong>${amigoSorteado}</strong>`;
+}
 
 
 
