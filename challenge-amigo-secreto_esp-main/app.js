@@ -31,10 +31,24 @@ actualizarlista();
 }
 
 //Funcion para actualizar la lista de amigos en la interfaz
+function actualizarlista(){
+    const ListaAmigos =document.getElementById('ListaAmigos');
 
+    //Limpiar el contenido actual de la lista
+    ListaAmigos.innerHTML = "";//Borra cualquier contenido previo dentro del contenedor de la lista
+
+    //Recorrer el array con un ciclo for
+    for(let i = 0; i<Amigos.length; i++){
+        const li = document.createElement('Li'),
+        Li.textcontent = Amigos[i];
+        ListaAmigos.appendChild(Li);
+    }
+
+}
 
 
 //Funcion para seleccionar un amigo aleatorio
+
 
 
 
